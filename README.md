@@ -10,7 +10,7 @@ Dibuat sebagai fondasi awal pengembangan aplikasi Laravel dalam tim.
 1. **Clone repository**
    ```bash
    git clone https://github.com/AhmadMayghinansya05/laravel-starter-crud.git
-   cd event-management
+   cd laravel-starter-crud
 Install dependencies
 
 bash
