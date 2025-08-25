@@ -4,15 +4,17 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
-// Landing: publik
+// Landing Page (publik)
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 
-// Event publik (read-only)
-Route::resource('events', EventController::class)->only(['index', 'show']);
+// Dashboard setelah login → diarahkan ke events.index
+Route::get('/dashboard', function () {
+    return redirect()->route('events.index');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-// Event CRUD (write) protected
+// Event CRUD (hanya untuk user login)
 Route::middleware('auth')->group(function () {
-    Route::resource('events', EventController::class)->only(['create','store','edit','update','destroy']);
+    Route::resource('events', EventController::class);
 });
 
 require __DIR__.'/auth.php';

@@ -12,4 +12,8 @@ class Event extends Model
         'event_date',
         'location',
     ];
+
+    protected $casts = [
+        'event_date' => 'datetime',
+    ];
 }
