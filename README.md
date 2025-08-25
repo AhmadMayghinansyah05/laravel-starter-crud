@@ -9,7 +9,7 @@ Dibuat sebagai fondasi awal pengembangan aplikasi Laravel dalam tim.
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/username/event-management.git
+   git clone https://github.com/AhmadMayghinansya05/laravel-starter-crud.git
    cd event-management
 Install dependencies
 
@@ -39,7 +39,7 @@ Edit
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=event_db
+DB_DATABASE=larvel_event
 DB_USERNAME=root
 DB_PASSWORD=
 Jalankan migrasi & seeder
@@ -81,7 +81,7 @@ event-management/
 👤 Sample User Login
 Seeder membuat akun dummy otomatis, gunakan data berikut untuk mencoba login:
 
-Email: admin@example.com
+Email: demo@example.com
 
 Password: password
 
